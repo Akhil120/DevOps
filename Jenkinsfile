@@ -18,6 +18,8 @@ pipeline {
                     // Activate the virtual environment
                     sh '. venv/bin/activate'
 
+                     sh 'pip install --upgrade pip'
+
                     // Install dependencies
                     sh 'pip install -r requirements.txt'
 
