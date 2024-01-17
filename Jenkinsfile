@@ -16,7 +16,7 @@ pipeline {
                     sh 'python3 -m venv venv'
 
                     // Activate the virtual environment
-                    sh 'source venv/bin/activate'
+                    sh '. venv/bin/activate'
 
                     // Install dependencies
                     sh 'pip install -r requirements.txt'
