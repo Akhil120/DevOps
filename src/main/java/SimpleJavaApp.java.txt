@@ -1,4 +1,6 @@
 // SimpleJavaApp.java
+package com.example;
+
 public class SimpleJavaApp {
 
     public static void main(String[] args) {

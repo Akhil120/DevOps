@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     // Clean and build the Maven project
-                    sh 'mvn clean install'
+                    sh 'mvn clean package'
                 }
             }
         }
