@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
 
     environment {
         // Set the JDK to use (configure this in Jenkins Global Tool Configuration)
@@ -7,7 +7,10 @@ pipeline {
     }
 
     stages {
-        stage('Build and Package') {
+        stage('Build and Package on MyNode') {
+            agent {
+                label 'jdk17'  // Specify the label of your Jenkins node
+            }
             steps {
                 script {
                     // Clean and build the Maven project
@@ -16,7 +19,10 @@ pipeline {
             }
         }
 
-        stage('Publish Artifacts') {
+        stage('Publish Artifacts on MyNode') {
+            agent {
+                label 'jdk17'  // Specify the label of your Jenkins node
+            }
             steps {
                 script {
                     // Archive the built artifacts (e.g., JAR file)
