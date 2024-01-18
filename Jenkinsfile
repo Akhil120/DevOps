@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Set the JDK to use (configure this in Jenkins Global Tool Configuration)
-        JAVA_HOME = '/opt/java/openjdk'
+        JAVA_HOME = '/usr/bin/java'
     }
 
     stages {
